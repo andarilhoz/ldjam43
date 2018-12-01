@@ -14,5 +14,7 @@ public class AppContext : MonoBehaviour
 
     private void Awake()
     {
+        
+        Debug.Log("Teste");
     }
 }
