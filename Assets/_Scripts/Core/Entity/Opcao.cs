@@ -6,6 +6,10 @@ namespace _Scripts.Core.Entity
     {
         public string Texto;
 
-        public IndicadorType Tipo;       
+        public IndicadorType Tipo;
+
+        public string tag;
+
+        public string tagCondicao;
     }
 }

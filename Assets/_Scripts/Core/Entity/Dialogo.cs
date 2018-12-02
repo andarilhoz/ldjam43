@@ -1,16 +1,11 @@
-<<<<<<< Updated upstream
 using System;
-=======
->>>>>>> Stashed changes
 using System.Collections.Generic;
 using _Scripts.Core.Enum;
 
 namespace _Scripts.Core.Entity
 {
     public class Dialogo
-    {
-<<<<<<< Updated upstream
-        
+    {   
         public string texto;
 
         public string imagem;
@@ -22,25 +17,28 @@ namespace _Scripts.Core.Entity
         public DateTime dataHora;
 
         public LayoutType layoutType;
-=======
-        public string Texto;
 
-        public List<Opcao> Opcoes;
+        public long respostaDialogoAnterior;
 
-        public long Ordem;
+        public int ordem;
 
-        public DialogoType Tipo;
+        public string tag;
 
-        public long RespostaDialogoAnterior;
->>>>>>> Stashed changes
-
-        public Dialogo(string texto, List<Opcao> opcoes, long ordem, DialogoType tipo, long respostaDialogoAnterior)
+        public Dialogo()
         {
-            Texto = texto;
-            Opcoes = opcoes;
-            Ordem = ordem;
-            Tipo = tipo;
-            RespostaDialogoAnterior = respostaDialogoAnterior;
+        }
+
+        public Dialogo(string texto, string imagem, List<Opcao> opcoes, DialogoType dialogoType, DateTime dataHora,
+            LayoutType layoutType, long respostaDialogoAnterior, int ordem)
+        {
+            this.texto = texto;
+            this.imagem = imagem;
+            this.opcoes = opcoes;
+            this.dialogoType = dialogoType;
+            this.dataHora = dataHora;
+            this.layoutType = layoutType;
+            this.respostaDialogoAnterior = respostaDialogoAnterior;
+            this.ordem = ordem;
         }
     }
 }

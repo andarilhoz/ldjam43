@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using _Scripts.Core.Entity;
 
 namespace _Scripts.Core.Usecase
@@ -12,11 +13,25 @@ namespace _Scripts.Core.Usecase
             this.dialogos = dialogos;
         }
 
-        public Dialogo getNextDialog(int rodadaAtual, long respostaRodadaAtual)
+        public Dialogo GetNextDialog(int rodadaAtual, long respostaRodadaAtual, List<string> tags)
         {
-            var dialogosDaRodada = dialogos.FindAll((d) => d.Ordem == rodadaAtual);
+            Dialogo dialogoSelecionado;
+            
+            do
+            {
+                var rodadaSeguinte = rodadaAtual++;
+                dialogoSelecionado = GetNextDialogInternal(rodadaSeguinte, respostaRodadaAtual, tags);
+                
+            } while (dialogoSelecionado == null);
 
-            var dialogo = dialogosDaRodada.Find((d) => d.RespostaDialogoAnterior == respostaRodadaAtual);
+            return dialogoSelecionado;
+        }
+
+        private Dialogo GetNextDialogInternal(int rodadaAtual, long respostaRodadaAtual, List<string> tags)
+        {            
+            var dialogosDaRodada = dialogos.FindAll((d) => d.ordem == rodadaAtual);
+
+            var dialogo = dialogosDaRodada.Find((d) => d.respostaDialogoAnterior == respostaRodadaAtual && tags.Contains(d.tag));
 
             return dialogo;
         }
