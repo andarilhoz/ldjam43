@@ -19,8 +19,8 @@ fs.readFile('data.csv', (error, file) =>
 
 			output[id] = output[id] ||
 			{
-				id,
-                order,
+				id: parseInt(id),
+                order: parseInt(order),
                 imageTitle,
                 description,
                 type,
@@ -34,10 +34,20 @@ fs.readFile('data.csv', (error, file) =>
             }
         }
         
-        output.map(o => {
+        output.map((o, index) => {
             Object.keys(o).map(k => {
                 if(o[k] == "") delete o[k]
             });
+
+            if(o.D == undefined) return;
+            output.find(out => out.order == o.order - 1 ).options[o.previous].status = {
+                dinheiro: o.D,
+                amor: o.A,
+                saude: o.S
+            } 
+            delete o.D
+            delete o.A;
+            delete o.S;
         });
 		const json = JSON.stringify(output, null, '\t')
 
