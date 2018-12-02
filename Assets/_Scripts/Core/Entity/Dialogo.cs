@@ -4,6 +4,7 @@ using _Scripts.Core.Enum;
 
 namespace _Scripts.Core.Entity
 {
+    [Serializable]
     public class Dialogo
     {   
         public string texto;

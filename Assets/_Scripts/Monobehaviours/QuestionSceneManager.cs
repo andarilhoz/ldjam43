@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using Injection;
 using TMPro;
 using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
+using _Scripts.Core.Entity;
+using _Scripts.Dataprovider;
 using _Scripts.Models;
 
 public class QuestionSceneManager : MonoBehaviour
@@ -18,8 +21,11 @@ public class QuestionSceneManager : MonoBehaviour
     public List<Button> Option3;
 
     [Inject] protected PlayerStatus PlayerStatus;
+    [Inject] protected FetchDialogoDataProvider FetchDialogoDataProvider;
 
     private bool answered = false;
+
+    private List<Dialogo> Dialogos;
 
     private void OnEnable()
     {
@@ -35,6 +41,15 @@ public class QuestionSceneManager : MonoBehaviour
         Option2.ForEach(b => b.onClick.AddListener(delegate { UpdateStatus(PlayerStatus.Amor); }));
 
         Option3.ForEach(b => b.onClick.AddListener(delegate { UpdateStatus(PlayerStatus.Saude); }));
+    }
+
+    private void Start()
+    {
+        FetchDialogoDataProvider.FetchAll(dialogos =>
+        {
+            dialogos.ForEach(d => Debug.Log(d.texto));
+            Debug.Log(dialogos.Count);    
+        });
     }
 
     private void UpdateStatus(IntReactiveProperty property)

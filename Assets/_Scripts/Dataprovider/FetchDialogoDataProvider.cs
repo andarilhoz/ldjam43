@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using Injection;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -11,16 +12,11 @@ namespace _Scripts.Dataprovider
 {
     public class FetchDialogoDataProvider: IFetchPerguntaGateway, IInjectable
     {
-        private MonoBehaviour context;
         private DataParser data;
-            
-        public FetchDialogoDataProvider(MonoBehaviour context, string dataUrl)
-        {
 
-            UnityWebRequest request = UnityWebRequest.Get(dataUrl);
-            context.StartCoroutine(MakeRequest(request, data => { this.data = JsonUtility.FromJson<DataParser>(data); }));
-        }
-
+        [Inject] protected GameConfig GameConfig;
+        [Inject] protected AppContext AppContext; 
+        
         private IEnumerator MakeRequest(UnityWebRequest request, Action<string> callback)
         {
             yield return request.SendWebRequest();
@@ -31,13 +27,19 @@ namespace _Scripts.Dataprovider
             }
             else
             {
+                Debug.Log(request.downloadHandler.text);
                 callback(request.downloadHandler.text);
             }
         }
 
-        public List<Dialogo> FetchAll()
+        public void FetchAll( Action<List<Dialogo>> callback)
         {
-            return data.Dialogos;
+            UnityWebRequest request = UnityWebRequest.Get(GameConfig.UrlData);
+            AppContext.StartCoroutine(MakeRequest(request, data =>
+            {
+                var response = JsonUtility.FromJson<DataParser>(data);
+                callback(response.Dialogos);
+            }));
         }
     }
 }
