@@ -15,6 +15,12 @@ namespace _Scripts.Core.Usecase
 
         public Dialogo GetNextDialog(int rodadaAtual, long respostaRodadaAtual, List<string> tags)
         {
+
+            if (rodadaAtual == 0)
+            {
+                return dialogos.FindAll((d) => d.ordem == 0).First();
+            }
+            
             Dialogo dialogoSelecionado;
             
             do
