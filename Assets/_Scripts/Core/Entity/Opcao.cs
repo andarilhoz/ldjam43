@@ -4,8 +4,8 @@ namespace _Scripts.Core.Entity
 {
     public class Opcao
     {
-        private string Texto { get; set; }
+        public string Texto;
 
-        private IndicadorType Tipo { get; set; }      
+        public TipoAlteracao Tipo;
     }
 }
