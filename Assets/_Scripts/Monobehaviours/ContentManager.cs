@@ -38,9 +38,15 @@ namespace _Scripts.Monobehaviours
             ZUIManager.Instance.OpenMenu(MyMenu);
             TimerManager?.SetTime(DateTimeOffset.FromUnixTimeMilliseconds(dialog.dataHora).LocalDateTime);
             Text.ForEach(t => { t.text = dialog.texto; });
-            Option1.ForEach(o => o.text = dialog.opcoes[0]?.Texto);
-            Option2.ForEach(o => o.text = dialog.opcoes[1]?.Texto);
-            Option3.ForEach(o => o.text = dialog.opcoes[2]?.Texto);
+
+            if (dialog.opcoes.Count > 0)
+            {
+                Debug.Log(dialog.opcoes[0].Texto);
+                Option1.ForEach(o => o.text = dialog.opcoes[0]?.Texto);
+            }
+
+            if(dialog.opcoes.Count > 1) Option2.ForEach(o => o.text = dialog.opcoes[1]?.Texto);
+            if(dialog.opcoes.Count > 2) Option3.ForEach(o => o.text = dialog.opcoes[2]?.Texto);
             
             FirstDialog?.gameObject.SetActive(dialog.layoutType == LayoutType.FIRST);
             SecondDialog?.gameObject.SetActive(dialog.layoutType == LayoutType.SECOND);

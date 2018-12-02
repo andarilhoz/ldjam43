@@ -19,21 +19,25 @@
 			"opcoes": [
 				{
 					"id": 0,
-					"description": "Order a burguer",
+					"Texto": "Order a burguer",
 					"Tipo": {
-						"dinheiro": "-10",
-						"amor": "0",
-						"saude": "10"
+						"Dinheiro": "-10",
+						"Amor": "0",
+						"Saude": "10"
 					}
 				},
 				{
 					"id": 1,
-					"description": "Order Chinese food",
+					"Texto": "Order Chinese food",
 					"Tipo": {
-						"dinheiro": "-10",
-						"amor": "0",
-						"saude": "10"
+						"Dinheiro": "-10",
+						"Amor": "0",
+						"Saude": "10"
 					}
+				},
+				{
+					"id": 2,
+					"Texto": "empty"
 				}
 			]
 		},
@@ -128,21 +132,25 @@
 			"opcoes": [
 				{
 					"id": 0,
-					"description": "Turn on sleep mode",
+					"Texto": "Turn on sleep mode",
 					"Tipo": {
-						"dinheiro": "0",
-						"amor": "-10",
-						"saude": "0"
+						"Dinheiro": "0",
+						"Amor": "-10",
+						"Saude": "0"
 					}
 				},
 				{
 					"id": 1,
-					"description": "Turn off alarm and get up",
+					"Texto": "Turn off alarm and get up",
 					"Tipo": {
-						"dinheiro": "0",
-						"amor": "10",
-						"saude": "0"
+						"Dinheiro": "0",
+						"Amor": "10",
+						"Saude": "0"
 					}
+				},
+				{
+					"id": 2,
+					"Texto": "empty"
 				}
 			]
 		},
@@ -229,22 +237,26 @@
 			"opcoes": [
 				{
 					"id": 0,
-					"description": "Yes...please…",
+					"Texto": "Yes...please…",
 					"Tipo": {
-						"dinheiro": "-10",
-						"amor": "-10",
-						"saude": "0"
+						"Dinheiro": "-10",
+						"Amor": "-10",
+						"Saude": "0"
 					}
 				},
 				{
 					"id": 1,
-					"description": "Actually, Carol, I want to know...if you would like to go out with me…",
+					"Texto": "Actually, Carol, I want to know...if you would like to go out with me…",
 					"Tipo": {
-						"dinheiro": "-10",
-						"amor": "10",
-						"saude": "0"
+						"Dinheiro": "-10",
+						"Amor": "10",
+						"Saude": "0"
 					},
 					"tag": "carolYes"
+				},
+				{
+					"id": 2,
+					"Texto": "empty"
 				}
 			]
 		},
@@ -260,23 +272,27 @@
 			"opcoes": [
 				{
 					"id": 0,
-					"description": "No...that’s all. Thanks.",
+					"Texto": "No...that’s all. Thanks.",
 					"Tipo": {
-						"dinheiro": "0",
-						"amor": "-10",
-						"saude": "0"
+						"Dinheiro": "0",
+						"Amor": "-10",
+						"Saude": "0"
 					},
 					"tag": "carolNo"
 				},
 				{
 					"id": 1,
-					"description": "Actually, Carol, I want to know...if you would like to go out with me…",
+					"Texto": "Actually, Carol, I want to know...if you would like to go out with me…",
 					"Tipo": {
-						"dinheiro": "0",
-						"amor": "10",
-						"saude": "0"
+						"Dinheiro": "0",
+						"Amor": "10",
+						"Saude": "0"
 					},
 					"tag": "carolYes"
+				},
+				{
+					"id": 2,
+					"Texto": "empty"
 				}
 			]
 		},
