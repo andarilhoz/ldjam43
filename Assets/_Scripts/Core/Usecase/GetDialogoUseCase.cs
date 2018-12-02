@@ -44,7 +44,7 @@ namespace _Scripts.Core.Usecase
             Dialogo dialogoSelecionado;
             do
             {
-                var rodadaSeguinte = rodadaAtual++;
+                int rodadaSeguinte = rodadaAtual + 1;
                 dialogoSelecionado = GetNextDialogInternal(rodadaSeguinte, tags);
                 
             } while (dialogoSelecionado == null);

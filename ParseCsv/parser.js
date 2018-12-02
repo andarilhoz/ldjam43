@@ -14,13 +14,20 @@ fs.readFile('data.csv', (error, file) => {
                 { id: 2, description: option2},
             ] : [];
             options = options.filter(o => o.description !== "empty")
+
+            let dialogoType = type == "TEXT_IMAGE_ONLY" ?  0 :
+                        type == "OPTIONS" ?  1 :
+                        type == "IMAGE_ONLY" ?  2 :
+                        type == "OPTIONS_WITH_TEXT" ?  3 :
+                        type == "TEXT_ONLY" ?  4 : "ERROR"
+
             Dialogos[id] = Dialogos[id] ||
                 {
                     id: parseInt(id),
                     ordem: parseInt(order),
                     imagem: imageTitle,
                     texto: description,
-                    dialogoType: type,
+                    dialogoType,
                     dataHora: new Date(dateTimeHour).getTime(),
                     layoutType: layout,
                     conditionTag,

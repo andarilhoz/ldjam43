@@ -73,10 +73,15 @@ public class QuestionSceneManager : MonoBehaviour
         Next(option);
     }
 
+    public void InitialSetup()
+    {
+        currentDialog = GetDialogoUseCase.GetNextDialog();
+        Setup();
+    }
+
     public void Setup()
     {
         Debug.Log("OLar");
-        currentDialog = GetDialogoUseCase.GetNextDialog();
         var manager = ContentManagers.Find(c => c.DialogoType == currentDialog.dialogoType);
         Debug.Log(currentDialog.texto);
         manager.Setup(currentDialog);
@@ -92,7 +97,7 @@ public class QuestionSceneManager : MonoBehaviour
     public void Next()
     {
         answered = false;
-        var dialog = GetDialogoUseCase.GetNextDialog(currentDialog.ordem, PlayerStatus.tags);
+        currentDialog = GetDialogoUseCase.GetNextDialog(currentDialog.ordem, PlayerStatus.tags);
         Setup();
     }
 
