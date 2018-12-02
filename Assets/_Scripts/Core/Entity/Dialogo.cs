@@ -15,7 +15,7 @@ namespace _Scripts.Core.Entity
         
         public DialogoType dialogoType;
 
-        public DateTime dataHora;
+        public JsonDateTime dataHora;
 
         public LayoutType layoutType;
 

@@ -15,7 +15,7 @@ fs.readFile('data.csv', (error, file) => {
             ] : [];
 
             options = options.filter(o => o.description !== "empty")
-
+            console.log(new Date(dateTimeHour).toLocaleString());
             Dialogos[id] = Dialogos[id] ||
                 {
                     id: parseInt(id),
@@ -23,7 +23,7 @@ fs.readFile('data.csv', (error, file) => {
                     imagem: imageTitle,
                     texto: description,
                     dialogoType: type,
-                    dataHora: new Date(dateTimeHour),
+                    dataHora: new Date(dateTimeHour).toLocaleString(),
                     layoutType: layout,
                     dialogoAnterior: parseInt(previous),
                     opcoes: options,
