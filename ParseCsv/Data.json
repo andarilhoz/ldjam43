@@ -45,7 +45,7 @@
 			"dialogoType": 0,
 			"dataHora": 1525398420000,
 			"layoutType": 0,
-			"dialogoAnterior": 0
+			"respostaDialogoAnterior": 0
 		},
 		{
 			"id": 3,
@@ -55,7 +55,7 @@
 			"dialogoType": 0,
 			"dataHora": 1525398420000,
 			"layoutType": 0,
-			"dialogoAnterior": 1
+			"respostaDialogoAnterior": 1
 		},
 		{
 			"id": 4,
@@ -154,7 +154,7 @@
 			"dialogoType": 0,
 			"dataHora": 1525432560000,
 			"layoutType": 0,
-			"dialogoAnterior": 0
+			"respostaDialogoAnterior": 0
 		},
 		{
 			"id": 13,
@@ -164,7 +164,7 @@
 			"dialogoType": 0,
 			"dataHora": 1525431960000,
 			"layoutType": 0,
-			"dialogoAnterior": 1
+			"respostaDialogoAnterior": 1
 		},
 		{
 			"id": 14,
@@ -256,7 +256,7 @@
 			"dialogoType": 3,
 			"dataHora": 1525434480000,
 			"layoutType": 0,
-			"dialogoAnterior": 0,
+			"respostaDialogoAnterior": 0,
 			"opcoes": [
 				{
 					"id": 0,
@@ -288,7 +288,7 @@
 			"dialogoType": 0,
 			"dataHora": 1525434480000,
 			"layoutType": 0,
-			"dialogoAnterior": 1
+			"respostaDialogoAnterior": 1
 		},
 		{
 			"id": 23,
@@ -298,7 +298,7 @@
 			"dialogoType": 0,
 			"dataHora": null,
 			"layoutType": 0,
-			"dialogoAnterior": 0
+			"respostaDialogoAnterior": 0
 		},
 		{
 			"id": 24,
@@ -308,7 +308,7 @@
 			"dialogoType": 0,
 			"dataHora": 1525434480000,
 			"layoutType": 0,
-			"dialogoAnterior": 1
+			"respostaDialogoAnterior": 1
 		}
 	]
 }

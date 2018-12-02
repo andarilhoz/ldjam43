@@ -53,24 +53,21 @@ public class QuestionSceneManager : MonoBehaviour
         if (answered) return;
         answered = true;
 
-        currentDialog.opcoes.ForEach(o =>
+        if (currentDialog.opcoes.Count < 1)
         {
-            PlayerStatus.Amor.Value += o.Tipo.Amor;
-            PlayerStatus.Dinheiro.Value += o.Tipo.Dinheiro;
-            PlayerStatus.Saude.Value += o.Tipo.Saude;
-            PlayerStatus.tags.Add(o.tag);
-        });
-
-        if (currentDialog.opcoes.Count > 0)
-        {
-            StartCoroutine(CoolDown(answerCoolDown, (() =>
-            {
-                Next(option);
-            })));
+            Next(option);
             return;
         }
 
-        Next(option);
+        PlayerStatus.Amor.SetValueAndForceNotify(Mathf.Clamp( PlayerStatus.Amor.Value + currentDialog.opcoes[option].Tipo.Amor, 0 ,100));
+        PlayerStatus.Amor.SetValueAndForceNotify(Mathf.Clamp( PlayerStatus.Dinheiro.Value + currentDialog.opcoes[option].Tipo.Dinheiro, 0 ,100));
+        PlayerStatus.Amor.SetValueAndForceNotify(Mathf.Clamp( PlayerStatus.Saude.Value + currentDialog.opcoes[option].Tipo.Saude, 0 ,100));
+        PlayerStatus.tags.Add(currentDialog.opcoes[option].tag);
+   
+        StartCoroutine(CoolDown(answerCoolDown, (() =>
+        {
+            Next(option);
+        })));
     }
 
     public void InitialSetup()
@@ -89,9 +86,9 @@ public class QuestionSceneManager : MonoBehaviour
 
     public void Next(int option)
     {
-        answered = false;
         var dialog = GetDialogoUseCase.GetNextDialog(currentDialog.ordem, option, PlayerStatus.tags);
         Setup();
+        answered = false;
     }
     
     public void Next()

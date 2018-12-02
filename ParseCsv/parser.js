@@ -32,7 +32,7 @@ fs.readFile('data.csv', (error, file) => {
                     layoutType: layout,
                     conditionTag,
                     tag,
-                    dialogoAnterior: parseInt(previous),
+                    respostaDialogoAnterior: parseInt(previous),
                     opcoes: options,
                     D,
                     A,
@@ -47,10 +47,10 @@ fs.readFile('data.csv', (error, file) => {
 
             if (o.opcoes.length < 1) delete o.opcoes
 
-            if (isNaN(o.dialogoAnterior)) delete o.dialogoAnterior
+            if (isNaN(o.respostaDialogoAnterior)) delete o.respostaDialogoAnterior
 
             if (o.D == undefined && o.tag == undefined) return;
-            Dialogos.find(out => out.ordem == o.ordem - 1).opcoes[o.dialogoAnterior].Tipo = {
+            Dialogos.find(out => out.ordem == o.ordem - 1).opcoes[o.respostaDialogoAnterior].Tipo = {
                 Dinheiro: o.D,
                 Amor: o.A,
                 Saude: o.S
@@ -60,7 +60,7 @@ fs.readFile('data.csv', (error, file) => {
             delete o.S;
             
             if(o.tag == undefined) return
-            Dialogos.find(out => out.ordem == o.ordem - 1).opcoes[o.dialogoAnterior].tag = o.tag
+            Dialogos.find(out => out.ordem == o.ordem - 1).opcoes[o.respostaDialogoAnterior].tag = o.tag
             delete o.tag
         });
         let d = {Dialogos}

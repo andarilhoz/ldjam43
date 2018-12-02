@@ -21,7 +21,7 @@ namespace _Scripts.Core.Usecase
             Dialogo dialogoSelecionado;
             do
             {
-                var rodadaSeguinte = rodadaAtual++;
+                var rodadaSeguinte = rodadaAtual + 1;
                 dialogoSelecionado = GetNextDialogInternal(rodadaSeguinte, respostaRodadaAtual, tags);
                 
             } while (dialogoSelecionado == null);
