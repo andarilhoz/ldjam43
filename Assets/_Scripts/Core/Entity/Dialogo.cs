@@ -15,7 +15,7 @@ namespace _Scripts.Core.Entity
         
         public DialogoType dialogoType;
 
-        public string dataHora;
+        public long dataHora;
 
         public LayoutType layoutType;
 
@@ -29,7 +29,7 @@ namespace _Scripts.Core.Entity
         {
         }
 
-        public Dialogo(string texto, string imagem, List<Opcao> opcoes, DialogoType dialogoType, string dataHora,
+        public Dialogo(string texto, string imagem, List<Opcao> opcoes, DialogoType dialogoType, long dataHora,
             LayoutType layoutType, long respostaDialogoAnterior, int ordem)
         {
             this.texto = texto;

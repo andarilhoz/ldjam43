@@ -37,5 +37,29 @@ namespace _Scripts.Core.Usecase
 
             return dialogo;
         }
+        
+        
+        public Dialogo GetNextDialog(int rodadaAtual, List<string> tags)
+        {
+            Dialogo dialogoSelecionado;
+            do
+            {
+                var rodadaSeguinte = rodadaAtual++;
+                dialogoSelecionado = GetNextDialogInternal(rodadaSeguinte, tags);
+                
+            } while (dialogoSelecionado == null);
+
+            return dialogoSelecionado;
+        }
+        
+        
+        private Dialogo GetNextDialogInternal(int ordem, List<string> tags)
+        {            
+            var dialogosDaRodada = FetchDialogoDataProvider.FetchAll().FindAll((d) => d.ordem == ordem);
+
+            var dialogo = dialogosDaRodada.Find((d) => (d.conditionTag == null || tags.Contains(d.conditionTag)));
+
+            return dialogo;
+        }
     }
 }

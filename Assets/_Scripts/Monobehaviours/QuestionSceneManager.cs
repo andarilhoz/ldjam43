@@ -11,22 +11,26 @@ using _Scripts.Core.Entity;
 using _Scripts.Core.Usecase;
 using _Scripts.Dataprovider;
 using _Scripts.Models;
+using _Scripts.Monobehaviours;
 
 public class QuestionSceneManager : MonoBehaviour
 {
-    public TextMeshProUGUI Title;
     public float answerCoolDown;
+
+    [Inject] protected PlayerStatus PlayerStatus;
+    [Inject] protected GetDialogoUseCase GetDialogoUseCase;
 
     public List<Button> Option1;
     public List<Button> Option2;
     public List<Button> Option3;
 
-    [Inject] protected PlayerStatus PlayerStatus;
-    [Inject] protected GetDialogoUseCase GetDialogoUseCase;
+    public List<Button> NextButton;
 
     private bool answered = false;
 
-    private List<Dialogo> Dialogos;
+    public List<ContentManager> ContentManagers;
+
+    private Dialogo currentDialog;
 
     private void OnEnable()
     {
@@ -37,33 +41,59 @@ public class QuestionSceneManager : MonoBehaviour
     {
         AppContext.Inject(this);
 
-        Option1.ForEach(b => b.onClick.AddListener(delegate { UpdateStatus(PlayerStatus.Dinheiro); }));
-
-        Option2.ForEach(b => b.onClick.AddListener(delegate { UpdateStatus(PlayerStatus.Amor); }));
-
-        Option3.ForEach(b => b.onClick.AddListener(delegate { UpdateStatus(PlayerStatus.Saude); }));
+        Option1.ForEach(o => { o.onClick.AddListener(delegate { Answer(0); }); });
+        Option2.ForEach(o => { o.onClick.AddListener(delegate { Answer(1); }); });
+        Option3.ForEach(o => { o.onClick.AddListener(delegate { Answer(2); }); });
+        NextButton.ForEach( n => n.onClick.AddListener(Next));
     }
-
-    private void Start()
-    {
-        var dialogo = GetDialogoUseCase.GetNextDialog();
-        
-        var date = DateTime.Parse(dialogo.dataHora, null, System.Globalization.DateTimeStyles.RoundtripKind);
-        Debug.Log(dialogo.dataHora);
-        Debug.Log(date);
-    }
-
-    private void UpdateStatus(IntReactiveProperty property)
+    
+    
+    private void Answer(int option)
     {
         if (answered) return;
         answered = true;
-        property.SetValueAndForceNotify(Mathf.Clamp(property.Value + 10, 0, 100));
 
-        StartCoroutine(CoolDown(answerCoolDown, () =>
+        currentDialog.opcoes.ForEach(o =>
         {
-            answered = false;
-            //ZUIManager.Instance.OpenMenu("Resolution");
-        }));
+            PlayerStatus.Amor.Value += o.Tipo.Amor;
+            PlayerStatus.Dinheiro.Value += o.Tipo.Dinheiro;
+            PlayerStatus.Saude.Value += o.Tipo.Saude;
+            PlayerStatus.tags.Add(o.tag);
+        });
+
+        if (currentDialog.opcoes.Count > 0)
+        {
+            StartCoroutine(CoolDown(answerCoolDown, (() =>
+            {
+                Next(option);
+            })));
+            return;
+        }
+
+        Next(option);
+    }
+
+    public void Setup()
+    {
+        Debug.Log("OLar");
+        currentDialog = GetDialogoUseCase.GetNextDialog();
+        var manager = ContentManagers.Find(c => c.DialogoType == currentDialog.dialogoType);
+        Debug.Log(currentDialog.texto);
+        manager.Setup(currentDialog);
+    }
+
+    public void Next(int option)
+    {
+        answered = false;
+        var dialog = GetDialogoUseCase.GetNextDialog(currentDialog.ordem, option, PlayerStatus.tags);
+        Setup();
+    }
+    
+    public void Next()
+    {
+        answered = false;
+        var dialog = GetDialogoUseCase.GetNextDialog(currentDialog.ordem, PlayerStatus.tags);
+        Setup();
     }
 
     private IEnumerator CoolDown(float timer, Action callback)
