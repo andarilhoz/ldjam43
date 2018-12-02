@@ -45,7 +45,8 @@ public class QuestionSceneManager : MonoBehaviour
 
         StartCoroutine(CoolDown(answerCoolDown, () =>
         {
-            ZUIManager.Instance.OpenMenu("Resolution");
+            answered = false;
+            //ZUIManager.Instance.OpenMenu("Resolution");
         }));
     }
 
