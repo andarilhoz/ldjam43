@@ -27,11 +27,11 @@ namespace _Scripts.Core.Usecase
             return dialogoSelecionado;
         }
 
-        private Dialogo GetNextDialogInternal(int rodadaAtual, long respostaRodadaAtual, List<string> tags)
+        private Dialogo GetNextDialogInternal(int ordem, long respostaRodadaAtual, List<string> tags)
         {            
-            var dialogosDaRodada = dialogos.FindAll((d) => d.ordem == rodadaAtual);
+            var dialogosDaRodada = dialogos.FindAll((d) => d.ordem == ordem);
 
-            var dialogo = dialogosDaRodada.Find((d) => d.respostaDialogoAnterior == respostaRodadaAtual && tags.Contains(d.tag));
+            var dialogo = dialogosDaRodada.Find((d) => d.respostaDialogoAnterior == respostaRodadaAtual && tags.Contains(d?.tag));
 
             return dialogo;
         }
