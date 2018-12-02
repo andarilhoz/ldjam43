@@ -1,6 +1,6 @@
 namespace _Scripts.Core.Enum
 {
-    public enum DialogoType
+    public enum LayoutType
     {
         
     }

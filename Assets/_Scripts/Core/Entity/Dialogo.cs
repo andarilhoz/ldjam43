@@ -1,13 +1,23 @@
+using System;
+using System.Collections.Generic;
+using _Scripts.Core.Enum;
+
 namespace _Scripts.Core.Entity
 {
     public class Dialogo
     {
         
-        private String texto;
+        public string texto;
 
-        private Imagem imagem;
+        public string imagem;
  
-        private List<Opcao> opcoes;
+        public List<Opcao> opcoes;
+        
+        public DialogoType dialogoType;
+
+        public DateTime dataHora;
+
+        public LayoutType layoutType;
 
     }
 }

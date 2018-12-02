@@ -6,15 +6,15 @@ namespace _Scripts.Models
     [System.Serializable]
     public struct PlayerStatus : IInjectable
     {
-        public IntReactiveProperty First;
-        public IntReactiveProperty Second;
-        public IntReactiveProperty Third;
+        public IntReactiveProperty Dinheiro;
+        public IntReactiveProperty Amor;
+        public IntReactiveProperty Saude;
 
-        public PlayerStatus(IntReactiveProperty first, IntReactiveProperty second, IntReactiveProperty third) : this()
+        public PlayerStatus(IntReactiveProperty dinheiro, IntReactiveProperty amor, IntReactiveProperty saude) : this()
         {
-            First = first;
-            Second = second;
-            Third = third;
+            Dinheiro = dinheiro;
+            Amor = amor;
+            Saude = saude;
         }
     }
 }

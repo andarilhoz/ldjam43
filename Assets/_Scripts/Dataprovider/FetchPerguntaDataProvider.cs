@@ -7,11 +7,11 @@ namespace _Scripts.dataprovider
 {
     public class FetchPerguntaDataProvider: IFetchPerguntaGateway, IInjectable
     {
-        public List<Pergunta> FetchAll()
+        public List<Dialogo> FetchAll()
         {
-            Pergunta p1 = new Pergunta();
+            Dialogo p1 = new Dialogo();
 
-            List<Pergunta> perguntas = new List<Pergunta>();
+            List<Dialogo> perguntas = new List<Dialogo>();
             
             perguntas.Add(p1);
 

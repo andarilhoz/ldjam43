@@ -1,10 +1,10 @@
 using System;
-using DefaultNamespace;
 using DG.Tweening;
 using Injection;
 using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
+using _Scripts.Core.Enum;
 using _Scripts.Models;
 
 namespace _Scripts.Monobehaviours
@@ -14,7 +14,7 @@ namespace _Scripts.Monobehaviours
         public Image PropertyLogo;
         public Image PropertyBarBackground;
         public Image PropertyBar;
-        public Property PropertyType;
+        public IndicadorType PropertyType;
         
         private float totalFill;
 
@@ -35,17 +35,17 @@ namespace _Scripts.Monobehaviours
         {
             switch (PropertyType)
             {
-                case Property.FIRST:
-                    PropertyBar.transform.localScale = new Vector3(GetPercent(PlayerStatus.First.Value),1,1);
-                    PlayerStatus.First.Subscribe(UpdateBar).AddTo(this);
+                case IndicadorType.DINHEIRO:
+                    PropertyBar.transform.localScale = new Vector3(GetPercent(PlayerStatus.Dinheiro.Value),1,1);
+                    PlayerStatus.Dinheiro.Subscribe(UpdateBar).AddTo(this);
                     break;
-                case Property.SECOND:
-                    PropertyBar.transform.localScale = new Vector3(GetPercent(PlayerStatus.Second.Value),1,1);
-                    PlayerStatus.Second.Subscribe(UpdateBar).AddTo(this);
+                case IndicadorType.AMOR:
+                    PropertyBar.transform.localScale = new Vector3(GetPercent(PlayerStatus.Amor.Value),1,1);
+                    PlayerStatus.Amor.Subscribe(UpdateBar).AddTo(this);
                     break;
-                case Property.THIRD:
-                    PropertyBar.transform.localScale = new Vector3(GetPercent(PlayerStatus.Third.Value),1,1);
-                    PlayerStatus.Third.Subscribe(UpdateBar).AddTo(this);
+                case IndicadorType.SAUDE:
+                    PropertyBar.transform.localScale = new Vector3(GetPercent(PlayerStatus.Saude.Value),1,1);
+                    PlayerStatus.Saude.Subscribe(UpdateBar).AddTo(this);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();

@@ -36,8 +36,10 @@ fs.readFile('data.csv', (error, file) =>
         
         output.map((o, index) => {
             Object.keys(o).map(k => {
-                if(o[k] == "") delete o[k]
+                if(o[k] === "") delete o[k]
             });
+
+            if(o.previous == "empty") delete o.previous
 
             if(o.D == undefined) return;
             output.find(out => out.order == o.order - 1 ).options[o.previous].status = {

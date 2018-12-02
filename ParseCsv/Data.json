@@ -1,10 +1,12 @@
 [
 	{
+		"id": 0,
+		"order": 0,
 		"imageTitle": "first_sofa",
 		"description": "Uhh...I’m starving. Guess I’ll order something…",
 		"type": "TEXT_IMAGE_ONLY",
 		"dateTimeHour": "03/05/2018 22:47:00",
-		"previous": "empty"
+		"layoutType": 0
 	},
 	{
 		"id": 1,
@@ -12,7 +14,7 @@
 		"imageTitle": "ifood_app",
 		"type": "OPTIONS",
 		"dateTimeHour": "03/05/2018 22:47:00",
-		"previous": "empty",
+		"layoutType": 0,
 		"options": [
 			{
 				"id": 0,
@@ -45,6 +47,7 @@
 		"description": "Damm, seems that my favorite fast food has closed earlier today. No burguer for you today, Dave. Chinese will be",
 		"type": "TEXT_IMAGE_ONLY",
 		"dateTimeHour": "03/05/2018 22:47:00",
+		"layoutType": 0,
 		"previous": "0"
 	},
 	{
@@ -54,6 +57,7 @@
 		"description": "It’s been a while since I don’t have a good Kung Pao Chicken. Hope it doesn't take so long",
 		"type": "TEXT_IMAGE_ONLY",
 		"dateTimeHour": "03/05/2018 22:47:00",
+		"layoutType": 0,
 		"previous": "1"
 	},
 	{
@@ -62,7 +66,7 @@
 		"imageTitle": "arrive",
 		"type": "IMAGE_ONLY",
 		"dateTimeHour": "03/05/2018 23:25:00",
-		"previous": "empty"
+		"layoutType": 0
 	},
 	{
 		"id": 5,
@@ -71,7 +75,7 @@
 		"description": "Hmm...what will be my fortune cookie advice for tonight?",
 		"type": "TEXT_IMAGE_ONLY",
 		"dateTimeHour": "03/05/2018 23:41:00",
-		"previous": "empty"
+		"layoutType": 0
 	},
 	{
 		"id": 6,
@@ -80,7 +84,7 @@
 		"description": "“Tomorrow is a mystery. Allow yourself to unravel it.”",
 		"type": "TEXT_IMAGE_ONLY",
 		"dateTimeHour": "03/05/2018 23:41:00",
-		"previous": "empty"
+		"layoutType": 0
 	},
 	{
 		"id": 7,
@@ -89,7 +93,7 @@
 		"description": "Woah. That’s incredibly generis. Hahaha. I love this generic fortune cookie wisdom.",
 		"type": "TEXT_IMAGE_ONLY",
 		"dateTimeHour": "03/05/2018 23:41:00",
-		"previous": "empty"
+		"layoutType": 0
 	},
 	{
 		"id": 8,
@@ -98,7 +102,7 @@
 		"description": " Well. Gotta go sleep.",
 		"type": "TEXT_IMAGE_ONLY",
 		"dateTimeHour": "03/05/2018 23:52:00",
-		"previous": "empty"
+		"layoutType": 0
 	},
 	{
 		"id": 9,
@@ -106,7 +110,7 @@
 		"imageTitle": "moon_sleep",
 		"type": "IMAGE_ONLY",
 		"dateTimeHour": "04/05/2018 03:00:00",
-		"previous": "empty"
+		"layoutType": 0
 	},
 	{
 		"id": 10,
@@ -115,7 +119,7 @@
 		"description": "Okay...okay...I’m awake...",
 		"type": "TEXT_IMAGE_ONLY",
 		"dateTimeHour": "04/05/2018 08:00:00",
-		"previous": "empty"
+		"layoutType": 0
 	},
 	{
 		"id": 11,
@@ -123,6 +127,7 @@
 		"imageTitle": "holding_phone",
 		"type": "OPTIONS",
 		"dateTimeHour": "04/05/2018 08:00:00",
+		"layoutType": 0,
 		"options": [
 			{
 				"id": 0,
@@ -155,6 +160,7 @@
 		"description": "Holy damm. I’m late! It will be no time for breakfast.",
 		"type": "TEXT_IMAGE_ONLY",
 		"dateTimeHour": "04/05/2018 08:16:00",
+		"layoutType": 0,
 		"previous": "0"
 	},
 	{
@@ -164,6 +170,7 @@
 		"description": "Breakfast is the most important meal of the day.",
 		"type": "TEXT_IMAGE_ONLY",
 		"dateTimeHour": "04/05/2018 08:06:00",
+		"layoutType": 0,
 		"previous": "1"
 	},
 	{
@@ -173,7 +180,7 @@
 		"description": "Don’t know why, but I’m feeling very good today. Very...powerfull. Like if I have my future entirely in my hands.",
 		"type": "TEXT_IMAGE_ONLY",
 		"dateTimeHour": "04/05/2018 08:19:00",
-		"previous": "empty"
+		"layoutType": 0
 	},
 	{
 		"id": 15,
@@ -182,7 +189,7 @@
 		"description": "Well. Better get this hands to job for good.",
 		"type": "TEXT_IMAGE_ONLY",
 		"dateTimeHour": "04/05/2018 08:25:00",
-		"previous": "empty"
+		"layoutType": 0
 	},
 	{
 		"id": 16,
@@ -190,7 +197,7 @@
 		"imageTitle": "moving",
 		"type": "IMAGE_ONLY",
 		"dateTimeHour": "04/05/2018 08:36:00",
-		"previous": "empty"
+		"layoutType": 0
 	},
 	{
 		"id": 17,
@@ -199,7 +206,7 @@
 		"description": "There she is. Carol. College crush, recently single, lovely and I still can’t ask her for a date…why she had to work on my work’s building coffee…? ",
 		"type": "TEXT_IMAGE_ONLY",
 		"dateTimeHour": "04/05/2018 08:48:00",
-		"previous": "empty"
+		"layoutType": 0
 	},
 	{
 		"id": 18,
@@ -208,7 +215,7 @@
 		"description": "Well, let’s follow the generic advice of the fortune cookie and unravel my future…",
 		"type": "TEXT_IMAGE_ONLY",
 		"dateTimeHour": "04/05/2018 08:48:00",
-		"previous": "empty"
+		"layoutType": 0
 	},
 	{
 		"id": 19,
@@ -217,7 +224,7 @@
 		"description": "Hi Dave, how are you today? The usual…?",
 		"type": "TEXT_IMAGE_ONLY",
 		"dateTimeHour": "04/05/2018 08:48:00",
-		"previous": "empty"
+		"layoutType": 0
 	},
 	{
 		"id": 20,
@@ -225,7 +232,7 @@
 		"imageTitle": "dave_akward_look",
 		"type": "OPTIONS",
 		"dateTimeHour": "04/05/2018 08:48:00",
-		"previous": "empty",
+		"layoutType": 0,
 		"options": [
 			{
 				"id": 0,
@@ -258,6 +265,7 @@
 		"description": "There you go. Something else?",
 		"type": "OPTIONS_WITH_TEXT",
 		"dateTimeHour": "04/05/2018 08:48:00",
+		"layoutType": 0,
 		"previous": "0",
 		"options": [
 			{
@@ -291,6 +299,7 @@
 		"description": " Well...yes...I mean...why not, your such a nice guy. Here. Take my number. Text me for the details. ",
 		"type": "TEXT_IMAGE_ONLY",
 		"dateTimeHour": "04/05/2018 08:48:00",
+		"layoutType": 0,
 		"previous": "1"
 	},
 	{
@@ -300,6 +309,7 @@
 		"description": "I am so lame...",
 		"type": "TEXT_IMAGE_ONLY",
 		"dateTimeHour": "04/05/2018 08:48:00",
+		"layoutType": 0,
 		"previous": "0"
 	},
 	{
@@ -309,6 +319,7 @@
 		"description": " Well...yes...I mean...why not, your such a nice guy. Here. Take my number. Text me for the details. ",
 		"type": "TEXT_IMAGE_ONLY",
 		"dateTimeHour": "04/05/2018 08:48:00",
+		"layoutType": 0,
 		"previous": "1"
 	}
 ]

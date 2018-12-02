@@ -30,11 +30,11 @@ public class QuestionSceneManager : MonoBehaviour
     {
         AppContext.Inject(this);
 
-        Option1.ForEach(b => b.onClick.AddListener(delegate { UpdateStatus(PlayerStatus.First); }));
+        Option1.ForEach(b => b.onClick.AddListener(delegate { UpdateStatus(PlayerStatus.Dinheiro); }));
 
-        Option2.ForEach(b => b.onClick.AddListener(delegate { UpdateStatus(PlayerStatus.Second); }));
+        Option2.ForEach(b => b.onClick.AddListener(delegate { UpdateStatus(PlayerStatus.Amor); }));
 
-        Option3.ForEach(b => b.onClick.AddListener(delegate { UpdateStatus(PlayerStatus.Third); }));
+        Option3.ForEach(b => b.onClick.AddListener(delegate { UpdateStatus(PlayerStatus.Saude); }));
     }
 
     private void UpdateStatus(IntReactiveProperty property)

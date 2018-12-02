@@ -21,7 +21,7 @@ namespace _Scripts
         public void fetchPerguntas()
         {   
             
-            List<Pergunta> perguntas = this.dataProvider.FetchAll();
+            List<Dialogo> perguntas = this.dataProvider.FetchAll();
             
             Assert.That(perguntas.Count == 1);
         }
