@@ -2,6 +2,7 @@
 using Injection;
 using UniRx;
 using UnityEngine;
+using _Scripts.Core.Usecase;
 using _Scripts.Dataprovider;
 using _Scripts.Models;
 using _Scripts.Monobehaviours;
@@ -13,6 +14,7 @@ public class AppContext : MonoBehaviour, IInjectable
     public PlayerStatus PlayerStatus = new PlayerStatus();
     public GameConfig GameConfig;
 
+    private FetchDialogoDataProvider FetchDialogoDataProvider = new FetchDialogoDataProvider();
     public static void Inject(object script)
     {
         Injector.Inject(script);
@@ -24,7 +26,13 @@ public class AppContext : MonoBehaviour, IInjectable
         Injector.Bind<GameConfig>(GameConfig);
         Injector.Bind<PlayerStatus>(PlayerStatus);
         Injector.Bind<AppContext>(this);
-        Injector.Bind<FetchDialogoDataProvider>(new FetchDialogoDataProvider());
+        Injector.Bind<FetchDialogoDataProvider>(FetchDialogoDataProvider);
+        Injector.Bind<GetDialogoUseCase>(new GetDialogoUseCase());
         Injector.PostBindings();
+    }
+
+    private void Start()
+    {
+        FetchDialogoDataProvider.Initialize();
     }
 }

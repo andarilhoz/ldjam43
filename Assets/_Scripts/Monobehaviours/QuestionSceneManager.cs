@@ -8,6 +8,7 @@ using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
 using _Scripts.Core.Entity;
+using _Scripts.Core.Usecase;
 using _Scripts.Dataprovider;
 using _Scripts.Models;
 
@@ -21,7 +22,7 @@ public class QuestionSceneManager : MonoBehaviour
     public List<Button> Option3;
 
     [Inject] protected PlayerStatus PlayerStatus;
-    [Inject] protected FetchDialogoDataProvider FetchDialogoDataProvider;
+    [Inject] protected GetDialogoUseCase GetDialogoUseCase;
 
     private bool answered = false;
 
@@ -45,11 +46,9 @@ public class QuestionSceneManager : MonoBehaviour
 
     private void Start()
     {
-        FetchDialogoDataProvider.FetchAll(dialogos =>
-        {
-            dialogos.ForEach(d => Debug.Log(d.texto));
-            Debug.Log(dialogos.Count);    
-        });
+        var dialogo = GetDialogoUseCase.GetNextDialog();
+        
+        Debug.Log(dialogo);
     }
 
     private void UpdateStatus(IntReactiveProperty property)

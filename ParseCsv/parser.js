@@ -23,7 +23,7 @@ fs.readFile('data.csv', (error, file) => {
                     imagem: imageTitle,
                     texto: description,
                     dialogoType: type,
-                    dataHor: dateTimeHour,
+                    dataHora: new Date(dateTimeHour),
                     layoutType: layout,
                     dialogoAnterior: parseInt(previous),
                     opcoes: options,

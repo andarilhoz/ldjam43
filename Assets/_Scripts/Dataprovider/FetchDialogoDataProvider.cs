@@ -12,7 +12,7 @@ namespace _Scripts.Dataprovider
 {
     public class FetchDialogoDataProvider: IFetchPerguntaGateway, IInjectable
     {
-        private DataParser data;
+        private List<Dialogo> data;
 
         [Inject] protected GameConfig GameConfig;
         [Inject] protected AppContext AppContext; 
@@ -32,14 +32,19 @@ namespace _Scripts.Dataprovider
             }
         }
 
-        public void FetchAll( Action<List<Dialogo>> callback)
+        public void Initialize()
         {
             UnityWebRequest request = UnityWebRequest.Get(GameConfig.UrlData);
             AppContext.StartCoroutine(MakeRequest(request, data =>
             {
                 var response = JsonUtility.FromJson<DataParser>(data);
-                callback(response.Dialogos);
+                this.data = response.Dialogos;
             }));
+        }
+
+        public List<Dialogo> FetchAll()
+        {
+            return data;
         }
     }
 }

@@ -1,28 +1,24 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Injection;
 using _Scripts.Core.Entity;
+using _Scripts.Dataprovider;
 
 namespace _Scripts.Core.Usecase
 {
-    public class GetDialogoUseCase
+    public class GetDialogoUseCase : IInjectable
     {
-        private List<Dialogo> dialogos;
-
-        public GetDialogoUseCase(List<Dialogo> dialogos)
+        [Inject] protected FetchDialogoDataProvider FetchDialogoDataProvider;
+        
+        
+        public Dialogo GetNextDialog()
         {
-            this.dialogos = dialogos;
+            return FetchDialogoDataProvider.FetchAll().FindAll((d) => d.ordem == 0).First();
         }
 
         public Dialogo GetNextDialog(int rodadaAtual, long respostaRodadaAtual, List<string> tags)
         {
-
-            if (rodadaAtual == 0)
-            {
-                return dialogos.FindAll((d) => d.ordem == 0).First();
-            }
-            
             Dialogo dialogoSelecionado;
-            
             do
             {
                 var rodadaSeguinte = rodadaAtual++;
@@ -35,7 +31,7 @@ namespace _Scripts.Core.Usecase
 
         private Dialogo GetNextDialogInternal(int ordem, long respostaRodadaAtual, List<string> tags)
         {            
-            var dialogosDaRodada = dialogos.FindAll((d) => d.ordem == ordem);
+            var dialogosDaRodada = FetchDialogoDataProvider.FetchAll().FindAll((d) => d.ordem == ordem);
 
             var dialogo = dialogosDaRodada.Find((d) => d.respostaDialogoAnterior == respostaRodadaAtual && (d.tag == null || tags.Contains(d.tag)));
 

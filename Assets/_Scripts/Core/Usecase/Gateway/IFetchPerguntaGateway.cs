@@ -7,7 +7,7 @@ namespace _Scripts.Core.Usecase.Gateway
 {
     public interface IFetchPerguntaGateway: IInjectable
     {
-        void FetchAll(Action<List<Dialogo>> callback);
+        List<Dialogo> FetchAll();
     }
    
 }
