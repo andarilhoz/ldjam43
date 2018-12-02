@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 114067672734926224}
   - component: {fileID: 114140764388108334}
   - component: {fileID: 114274716846969928}
+  - component: {fileID: 114510400276924266}
   m_Layer: 5
   m_Name: Avatar
   m_TagString: Untagged
@@ -693,6 +694,37 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114510400276924266
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1824582845027254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f19b7e2285c104f6ca47d583f3e5444f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 300
+  m_EffectMaterial: {fileID: 2100000, guid: 9dc7e810a87b444ab96919f3215c2fe5, type: 2}
+  m_EffectFactor: 0
+  m_Width: 0.25
+  m_Rotation: 61
+  m_Softness: 1
+  m_Brightness: 0.311
+  m_Gloss: 0.522
+  m_EffectArea: 0
+  m_Player:
+    play: 1
+    loop: 1
+    duration: 1.74
+    loopDelay: 2.52
+    updateMode: 0
+  m_Play: 0
+  m_Loop: 0
+  m_Duration: 1
+  m_LoopDelay: 1
+  m_UpdateMode: 0
 --- !u!114 &114526534374239550
 MonoBehaviour:
   m_ObjectHideFlags: 1
