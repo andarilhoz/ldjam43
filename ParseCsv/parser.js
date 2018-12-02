@@ -2,7 +2,7 @@
 const fs = require('fs')
 const csv = require('csv')
 
-const output = []
+const Dialogos = []
 
 fs.readFile('data.csv', (error, file) => {
     csv.parse(file.toString(), (error, data) => {
@@ -16,7 +16,7 @@ fs.readFile('data.csv', (error, file) => {
 
             options = options.filter(o => o.description !== "empty")
 
-            output[id] = output[id] ||
+            Dialogos[id] = Dialogos[id] ||
                 {
                     id: parseInt(id),
                     ordem: parseInt(order),
@@ -33,17 +33,17 @@ fs.readFile('data.csv', (error, file) => {
                 }
         }
 
-        output.map((o, index) => {
+        Dialogos.map((o, index) => {
             Object.keys(o).map(k => {
                 if (o[k] === "") delete o[k]
             });
 
-            if (o.options.length < 1) delete o.options
+            if (o.opcoes.length < 1) delete o.opcoes
 
-            if (isNaN(o.previous)) delete o.previous
+            if (isNaN(o.dialogoAnterior)) delete o.dialogoAnterior
 
             if (o.D == undefined) return;
-            output.find(out => out.order == o.order - 1).options[o.previous].status = {
+            Dialogos.find(out => out.ordem == o.ordem - 1).opcoes[o.dialogoAnterior].Tipo = {
                 dinheiro: o.D,
                 amor: o.A,
                 saude: o.S
@@ -52,7 +52,8 @@ fs.readFile('data.csv', (error, file) => {
             delete o.A;
             delete o.S;
         });
-        const json = JSON.stringify(output, null, '\t')
+        let d = {Dialogos}
+        const json = JSON.stringify(d, null, '\t')
 
         fs.writeFile('Data.json', json, error => {
             console.log(error ? error : 'Written')
