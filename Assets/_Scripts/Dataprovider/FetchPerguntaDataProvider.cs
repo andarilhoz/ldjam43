@@ -9,6 +9,7 @@ namespace _Scripts.dataprovider
     {
         public List<Dialogo> FetchAll()
         {
+<<<<<<< Updated upstream
             Dialogo p1 = new Dialogo();
 
             List<Dialogo> perguntas = new List<Dialogo>();
@@ -16,6 +17,9 @@ namespace _Scripts.dataprovider
             perguntas.Add(p1);
 
             return perguntas;
+=======
+            return new List<Dialogo>();
+>>>>>>> Stashed changes
         }
     }
 }

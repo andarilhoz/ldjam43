@@ -14,7 +14,11 @@ namespace _Scripts.Core.Usecase
 
         public Dialogo getNextDialog(int rodadaAtual, long respostaRodadaAtual)
         {
-            return new Dialogo();
+            var dialogosDaRodada = dialogos.FindAll((d) => d.Ordem == rodadaAtual);
+
+            var dialogo = dialogosDaRodada.Find((d) => d.RespostaDialogoAnterior == respostaRodadaAtual);
+
+            return dialogo;
         }
     }
 }
