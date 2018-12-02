@@ -34,10 +34,6 @@
 						"Amor": "0",
 						"Saude": "10"
 					}
-				},
-				{
-					"id": 2,
-					"Texto": "empty"
 				}
 			]
 		},
@@ -147,10 +143,6 @@
 						"Amor": "10",
 						"Saude": "0"
 					}
-				},
-				{
-					"id": 2,
-					"Texto": "empty"
 				}
 			]
 		},
@@ -253,10 +245,6 @@
 						"Saude": "0"
 					},
 					"tag": "carolYes"
-				},
-				{
-					"id": 2,
-					"Texto": "empty"
 				}
 			]
 		},
@@ -289,10 +277,6 @@
 						"Saude": "0"
 					},
 					"tag": "carolYes"
-				},
-				{
-					"id": 2,
-					"Texto": "empty"
 				}
 			]
 		},

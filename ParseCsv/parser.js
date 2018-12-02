@@ -13,7 +13,7 @@ fs.readFile('data.csv', (error, file) => {
                 { id: 1, Texto: option1},
                 { id: 2, Texto: option2},
             ] : [];
-            options = options.filter(o => o.description !== "empty")
+            options = options.filter(o => o.Texto !== "empty")
 
             let dialogoType = type == "TEXT_IMAGE_ONLY" ?  0 :
                         type == "OPTIONS" ?  1 :
@@ -58,7 +58,7 @@ fs.readFile('data.csv', (error, file) => {
             delete o.D
             delete o.A;
             delete o.S;
-            console.log(o.texto);
+            
             if(o.tag == undefined) return
             Dialogos.find(out => out.ordem == o.ordem - 1).opcoes[o.dialogoAnterior].tag = o.tag
             delete o.tag
