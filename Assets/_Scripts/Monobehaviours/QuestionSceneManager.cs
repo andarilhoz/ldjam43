@@ -48,7 +48,7 @@ public class QuestionSceneManager : MonoBehaviour
     {
         var dialogo = GetDialogoUseCase.GetNextDialog();
         
-        Debug.Log(dialogo.dataHora);
+        Debug.Log((DateTime)dialogo.dataHora);
     }
 
     private void UpdateStatus(IntReactiveProperty property)

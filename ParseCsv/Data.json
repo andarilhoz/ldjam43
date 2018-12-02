@@ -6,7 +6,7 @@
 			"imagem": "first_sofa",
 			"texto": "Uhh...I’m starving. Guess I’ll order something…",
 			"dialogoType": "TEXT_IMAGE_ONLY",
-			"dataHora": "2018-3-5 22:47:00",
+			"dataHora": "Tue, 06 Mar 2018 01:47:00 GMT",
 			"layoutType": 0
 		},
 		{
@@ -14,7 +14,7 @@
 			"ordem": 1,
 			"imagem": "ifood_app",
 			"dialogoType": "OPTIONS",
-			"dataHora": "2018-3-5 22:47:00",
+			"dataHora": "Tue, 06 Mar 2018 01:47:00 GMT",
 			"layoutType": 0,
 			"opcoes": [
 				{
@@ -43,7 +43,7 @@
 			"imagem": "frustated",
 			"texto": "Damm, seems that my favorite fast food has closed earlier today. No burguer for you today, Dave. Chinese will be",
 			"dialogoType": "TEXT_IMAGE_ONLY",
-			"dataHora": "2018-3-5 22:47:00",
+			"dataHora": "Tue, 06 Mar 2018 01:47:00 GMT",
 			"layoutType": 0,
 			"dialogoAnterior": 0
 		},
@@ -53,7 +53,7 @@
 			"imagem": "aguanabocamedatesao",
 			"texto": "It’s been a while since I don’t have a good Kung Pao Chicken. Hope it doesn't take so long",
 			"dialogoType": "TEXT_IMAGE_ONLY",
-			"dataHora": "2018-3-5 22:47:00",
+			"dataHora": "Tue, 06 Mar 2018 01:47:00 GMT",
 			"layoutType": 0,
 			"dialogoAnterior": 1
 		},
@@ -62,7 +62,7 @@
 			"ordem": 3,
 			"imagem": "arrive",
 			"dialogoType": "IMAGE_ONLY",
-			"dataHora": "2018-3-5 23:25:00",
+			"dataHora": "Tue, 06 Mar 2018 02:25:00 GMT",
 			"layoutType": 0
 		},
 		{
@@ -71,7 +71,7 @@
 			"imagem": "fortune_cookie",
 			"texto": "Hmm...what will be my fortune cookie advice for tonight?",
 			"dialogoType": "TEXT_IMAGE_ONLY",
-			"dataHora": "2018-3-5 23:41:00",
+			"dataHora": "Tue, 06 Mar 2018 02:41:00 GMT",
 			"layoutType": 0
 		},
 		{
@@ -80,7 +80,7 @@
 			"imagem": "cookie_eaten",
 			"texto": "“Tomorrow is a mystery. Allow yourself to unravel it.”",
 			"dialogoType": "TEXT_IMAGE_ONLY",
-			"dataHora": "2018-3-5 23:41:00",
+			"dataHora": "Tue, 06 Mar 2018 02:41:00 GMT",
 			"layoutType": 0
 		},
 		{
@@ -89,7 +89,7 @@
 			"imagem": "dave_laught",
 			"texto": "Woah. That’s incredibly generis. Hahaha. I love this generic fortune cookie wisdom.",
 			"dialogoType": "TEXT_IMAGE_ONLY",
-			"dataHora": "2018-3-5 23:41:00",
+			"dataHora": "Tue, 06 Mar 2018 02:41:00 GMT",
 			"layoutType": 0
 		},
 		{
@@ -98,7 +98,7 @@
 			"imagem": "arm_clock",
 			"texto": " Well. Gotta go sleep.",
 			"dialogoType": "TEXT_IMAGE_ONLY",
-			"dataHora": "2018-3-5 23:52:00",
+			"dataHora": "Tue, 06 Mar 2018 02:52:00 GMT",
 			"layoutType": 0
 		},
 		{
@@ -106,7 +106,7 @@
 			"ordem": 8,
 			"imagem": "moon_sleep",
 			"dialogoType": "IMAGE_ONLY",
-			"dataHora": "2018-4-5 03:00:00",
+			"dataHora": "Thu, 05 Apr 2018 06:00:00 GMT",
 			"layoutType": 0
 		},
 		{
@@ -115,7 +115,7 @@
 			"imagem": "cellphone_alarm",
 			"texto": "Okay...okay...I’m awake...",
 			"dialogoType": "TEXT_IMAGE_ONLY",
-			"dataHora": "2018-4-5 08:00:00",
+			"dataHora": "Thu, 05 Apr 2018 11:00:00 GMT",
 			"layoutType": 0
 		},
 		{
@@ -123,7 +123,7 @@
 			"ordem": 10,
 			"imagem": "holding_phone",
 			"dialogoType": "OPTIONS",
-			"dataHora": "2018-4-5 08:00:00",
+			"dataHora": "Thu, 05 Apr 2018 11:00:00 GMT",
 			"layoutType": 0,
 			"opcoes": [
 				{
@@ -152,7 +152,7 @@
 			"imagem": "frustated",
 			"texto": "Holy damm. I’m late! It will be no time for breakfast.",
 			"dialogoType": "TEXT_IMAGE_ONLY",
-			"dataHora": "2018-4-5 08:16:00",
+			"dataHora": "Thu, 05 Apr 2018 11:16:00 GMT",
 			"layoutType": 0,
 			"dialogoAnterior": 0
 		},
@@ -162,7 +162,7 @@
 			"imagem": "eating_cereal",
 			"texto": "Breakfast is the most important meal of the day.",
 			"dialogoType": "TEXT_IMAGE_ONLY",
-			"dataHora": "2018-4-5 08:06:00",
+			"dataHora": "Thu, 05 Apr 2018 11:06:00 GMT",
 			"layoutType": 0,
 			"dialogoAnterior": 1
 		},
@@ -172,7 +172,7 @@
 			"imagem": "getting_dressed",
 			"texto": "Don’t know why, but I’m feeling very good today. Very...powerfull. Like if I have my future entirely in my hands.",
 			"dialogoType": "TEXT_IMAGE_ONLY",
-			"dataHora": "2018-4-5 08:19:00",
+			"dataHora": "Thu, 05 Apr 2018 11:19:00 GMT",
 			"layoutType": 0
 		},
 		{
@@ -181,7 +181,7 @@
 			"imagem": "hands_on_lock",
 			"texto": "Well. Better get this hands to job for good.",
 			"dialogoType": "TEXT_IMAGE_ONLY",
-			"dataHora": "2018-4-5 08:25:00",
+			"dataHora": "Thu, 05 Apr 2018 11:25:00 GMT",
 			"layoutType": 0
 		},
 		{
@@ -189,7 +189,7 @@
 			"ordem": 14,
 			"imagem": "moving",
 			"dialogoType": "IMAGE_ONLY",
-			"dataHora": "2018-4-5 08:36:00",
+			"dataHora": "Thu, 05 Apr 2018 11:36:00 GMT",
 			"layoutType": 0
 		},
 		{
@@ -198,7 +198,7 @@
 			"imagem": "coffe_with_balconeer",
 			"texto": "There she is. Carol. College crush, recently single, lovely and I still can’t ask her for a date…why she had to work on my work’s building coffee…? ",
 			"dialogoType": "TEXT_IMAGE_ONLY",
-			"dataHora": "2018-4-5 08:48:00",
+			"dataHora": "Thu, 05 Apr 2018 11:48:00 GMT",
 			"layoutType": 0
 		},
 		{
@@ -207,7 +207,7 @@
 			"imagem": "dave_look",
 			"texto": "Well, let’s follow the generic advice of the fortune cookie and unravel my future…",
 			"dialogoType": "TEXT_IMAGE_ONLY",
-			"dataHora": "2018-4-5 08:48:00",
+			"dataHora": "Thu, 05 Apr 2018 11:48:00 GMT",
 			"layoutType": 0
 		},
 		{
@@ -216,7 +216,7 @@
 			"imagem": "carol_balconeer",
 			"texto": "Hi Dave, how are you today? The usual…?",
 			"dialogoType": "TEXT_IMAGE_ONLY",
-			"dataHora": "2018-4-5 08:48:00",
+			"dataHora": "Thu, 05 Apr 2018 11:48:00 GMT",
 			"layoutType": 0
 		},
 		{
@@ -224,7 +224,7 @@
 			"ordem": 18,
 			"imagem": "dave_akward_look",
 			"dialogoType": "OPTIONS",
-			"dataHora": "2018-4-5 08:48:00",
+			"dataHora": "Thu, 05 Apr 2018 11:48:00 GMT",
 			"layoutType": 0,
 			"opcoes": [
 				{
@@ -253,7 +253,7 @@
 			"imagem": "receiving_cup_coffee",
 			"texto": "There you go. Something else?",
 			"dialogoType": "OPTIONS_WITH_TEXT",
-			"dataHora": "2018-4-5 08:48:00",
+			"dataHora": "Thu, 05 Apr 2018 11:48:00 GMT",
 			"layoutType": 0,
 			"dialogoAnterior": 0,
 			"opcoes": [
@@ -283,7 +283,7 @@
 			"imagem": "akward_carol",
 			"texto": " Well...yes...I mean...why not, your such a nice guy. Here. Take my number. Text me for the details. ",
 			"dialogoType": "TEXT_IMAGE_ONLY",
-			"dataHora": "2018-4-5 08:48:00",
+			"dataHora": "Thu, 05 Apr 2018 11:48:00 GMT",
 			"layoutType": 0,
 			"dialogoAnterior": 1
 		},
@@ -293,7 +293,7 @@
 			"imagem": "facepalm",
 			"texto": "I am so lame...",
 			"dialogoType": "TEXT_IMAGE_ONLY",
-			"dataHora": "2018-4-5 08:48:00",
+			"dataHora": "Thu, 05 Apr 2018 11:48:00 GMT",
 			"layoutType": 0,
 			"dialogoAnterior": 0
 		},
@@ -303,7 +303,7 @@
 			"imagem": "akward_carol",
 			"texto": " Well...yes...I mean...why not, your such a nice guy. Here. Take my number. Text me for the details. ",
 			"dialogoType": "TEXT_IMAGE_ONLY",
-			"dataHora": "2018-4-5 08:48:00",
+			"dataHora": "Thu, 05 Apr 2018 11:48:00 GMT",
 			"layoutType": 0,
 			"dialogoAnterior": 1
 		}
