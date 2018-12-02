@@ -36,7 +36,7 @@ namespace _Scripts.Monobehaviours
         public void Setup(Dialogo dialog)
         {
             ZUIManager.Instance.OpenMenu(MyMenu);
-            TimerManager?.SetTime(DateTimeOffset.FromUnixTimeMilliseconds(dialog.dataHora).DateTime);
+            TimerManager?.SetTime(DateTimeOffset.FromUnixTimeMilliseconds(dialog.dataHora).LocalDateTime);
             Text.ForEach(t => { t.text = dialog.texto; });
             Option1.ForEach(o => o.text = dialog.opcoes[0]?.Texto);
             Option2.ForEach(o => o.text = dialog.opcoes[1]?.Texto);
