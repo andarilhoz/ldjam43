@@ -9,5 +9,6 @@ namespace _Scripts.Core.Entity
         public string Texto;
 
         public TipoAlteracao Tipo;
+        public string tag;
     }
 }

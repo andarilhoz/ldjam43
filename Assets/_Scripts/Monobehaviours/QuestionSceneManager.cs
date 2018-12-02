@@ -49,6 +49,7 @@ public class QuestionSceneManager : MonoBehaviour
         var dialogo = GetDialogoUseCase.GetNextDialog();
         
         var date = DateTime.Parse(dialogo.dataHora, null, System.Globalization.DateTimeStyles.RoundtripKind);
+        Debug.Log(dialogo.dataHora);
         Debug.Log(date);
     }
 

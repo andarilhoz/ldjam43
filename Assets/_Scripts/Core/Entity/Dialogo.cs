@@ -23,13 +23,13 @@ namespace _Scripts.Core.Entity
 
         public int ordem;
 
-        public string tag;
+        public string conditionTag;
 
         public Dialogo()
         {
         }
 
-        public Dialogo(string texto, string imagem, List<Opcao> opcoes, DialogoType dialogoType, DateTime dataHora,
+        public Dialogo(string texto, string imagem, List<Opcao> opcoes, DialogoType dialogoType, string dataHora,
             LayoutType layoutType, long respostaDialogoAnterior, int ordem)
         {
             this.texto = texto;

@@ -33,7 +33,7 @@ namespace _Scripts.Core.Usecase
         {            
             var dialogosDaRodada = FetchDialogoDataProvider.FetchAll().FindAll((d) => d.ordem == ordem);
 
-            var dialogo = dialogosDaRodada.Find((d) => d.respostaDialogoAnterior == respostaRodadaAtual && (d.tag == null || tags.Contains(d.tag)));
+            var dialogo = dialogosDaRodada.Find((d) => d.respostaDialogoAnterior == respostaRodadaAtual && (d.conditionTag == null || tags.Contains(d.conditionTag)));
 
             return dialogo;
         }

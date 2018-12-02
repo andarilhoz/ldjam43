@@ -6,16 +6,14 @@ const Dialogos = []
 
 fs.readFile('data.csv', (error, file) => {
     csv.parse(file.toString(), (error, data) => {
-        for (const [id, order, imageTitle, description, type, dateTimeHour, layoutType, previous, option0, option1, option2, D, A, S] of data) {
+        for (const [id, order, imageTitle, description, type, dateTimeHour, layoutType, previous, tag, conditionTag, option0, option1, option2, D, A, S] of data) {
             let layout = layoutType == 'FIRST' ? 0 : 1
             let options = option0.length > 0 ? [
-                { id: 0, description: option0 },
-                { id: 1, description: option1 },
-                { id: 2, description: option2 },
+                { id: 0, description: option0},
+                { id: 1, description: option1},
+                { id: 2, description: option2},
             ] : [];
-
             options = options.filter(o => o.description !== "empty")
-            console.log(new Date(dateTimeHour).toISOString());
             Dialogos[id] = Dialogos[id] ||
                 {
                     id: parseInt(id),
@@ -23,8 +21,10 @@ fs.readFile('data.csv', (error, file) => {
                     imagem: imageTitle,
                     texto: description,
                     dialogoType: type,
-                    dataHora: new Date(dateTimeHour).toISOString(),
+                    dataHora: new Date(dateTimeHour).getTime(),
                     layoutType: layout,
+                    conditionTag,
+                    tag,
                     dialogoAnterior: parseInt(previous),
                     opcoes: options,
                     D,
@@ -42,7 +42,7 @@ fs.readFile('data.csv', (error, file) => {
 
             if (isNaN(o.dialogoAnterior)) delete o.dialogoAnterior
 
-            if (o.D == undefined) return;
+            if (o.D == undefined && o.tag == undefined) return;
             Dialogos.find(out => out.ordem == o.ordem - 1).opcoes[o.dialogoAnterior].Tipo = {
                 dinheiro: o.D,
                 amor: o.A,
@@ -51,6 +51,10 @@ fs.readFile('data.csv', (error, file) => {
             delete o.D
             delete o.A;
             delete o.S;
+            console.log(o.texto);
+            if(o.tag == undefined) return
+            Dialogos.find(out => out.ordem == o.ordem - 1).opcoes[o.dialogoAnterior].tag = o.tag
+            delete o.tag
         });
         let d = {Dialogos}
         const json = JSON.stringify(d, null, '\t')
