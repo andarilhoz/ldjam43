@@ -1,0 +1,26 @@
+id,order,imageTitle,description,type,dateTimeHour,layoutType,previous,option0,option1,option2,D,A,S
+0,0,first_sofa,Uhh...I’m starving. Guess I’ll order something…,TEXT_IMAGE_ONLY,03/05/2018 22:47:00,FIRST,empty,,,,,,
+1,1,ifood_app,,OPTIONS,03/05/2018 22:47:00,FIRST,empty,Order a burguer,Order Chinese food,empty,,,
+2,2,frustated,"Damm, seems that my favorite fast food has closed earlier today. No burguer for you today, Dave. Chinese will be",TEXT_IMAGE_ONLY,03/05/2018 22:47:00,FIRST,0,,,,-10,0,10
+3,2,aguanabocamedatesao,It’s been a while since I don’t have a good Kung Pao Chicken. Hope it doesn't take so long,TEXT_IMAGE_ONLY,03/05/2018 22:47:00,FIRST,1,,,,-10,0,10
+4,3,arrive,,IMAGE_ONLY,03/05/2018 23:25:00,FIRST,empty,,,,,,
+5,4,fortune_cookie,Hmm...what will be my fortune cookie advice for tonight?,TEXT_IMAGE_ONLY,03/05/2018 23:41:00,FIRST,empty,,,,,,
+6,5,cookie_eaten,“Tomorrow is a mystery. Allow yourself to unravel it.”,TEXT_IMAGE_ONLY,03/05/2018 23:41:00,FIRST,empty,,,,,,
+7,6,dave_laught,Woah. That’s incredibly generis. Hahaha. I love this generic fortune cookie wisdom.,TEXT_IMAGE_ONLY,03/05/2018 23:41:00,FIRST,empty,,,,,,
+8,7,arm_clock, Well. Gotta go sleep.,TEXT_IMAGE_ONLY,03/05/2018 23:52:00,FIRST,empty,,,,,,
+9,8,moon_sleep,,IMAGE_ONLY,04/05/2018 03:00:00,FIRST,empty,,,,,,
+10,9,cellphone_alarm,Okay...okay...I’m awake...,TEXT_IMAGE_ONLY,04/05/2018 08:00:00,FIRST,empty,,,,,,
+11,10,holding_phone,,OPTIONS,04/05/2018 08:00:00,FIRST,,Turn on sleep mode,Turn off alarm and get up,empty,,,
+12,11,frustated,Holy damm. I’m late! It will be no time for breakfast.,TEXT_IMAGE_ONLY,04/05/2018 08:16:00,FIRST,0,,,,0,-10,0
+13,11,eating_cereal,Breakfast is the most important meal of the day.,TEXT_IMAGE_ONLY,04/05/2018 08:06:00,FIRST,1,,,,0,10,0
+14,12,getting_dressed,"Don’t know why, but I’m feeling very good today. Very...powerfull. Like if I have my future entirely in my hands.",TEXT_IMAGE_ONLY,04/05/2018 08:19:00,FIRST,empty,,,,,,
+15,13,hands_on_lock,Well. Better get this hands to job for good.,TEXT_IMAGE_ONLY,04/05/2018 08:25:00,FIRST,empty,,,,,,
+16,14,moving,,IMAGE_ONLY,04/05/2018 08:36:00,FIRST,empty,,,,,,
+17,15,coffe_with_balconeer,"There she is. Carol. College crush, recently single, lovely and I still can’t ask her for a date…why she had to work on my work’s building coffee…? ",TEXT_IMAGE_ONLY,04/05/2018 08:48:00,FIRST,empty,,,,,,
+18,16,dave_look,"Well, let’s follow the generic advice of the fortune cookie and unravel my future…",TEXT_IMAGE_ONLY,04/05/2018 08:48:00,FIRST,empty,,,,,,
+19,17,carol_balconeer,"Hi Dave, how are you today? The usual…?",TEXT_IMAGE_ONLY,04/05/2018 08:48:00,FIRST,empty,,,,,,
+20,18,dave_akward_look,,OPTIONS,04/05/2018 08:48:00,FIRST,empty,Yes...please…,"Actually, Carol, I want to know...if you would like to go out with me…",empty,,,
+21,19,receiving_cup_coffee,There you go. Something else?,OPTIONS_WITH_TEXT,04/05/2018 08:48:00,FIRST,0,No...that’s all. Thanks.,"Actually, Carol, I want to know...if you would like to go out with me…",empty,-10,-10,0
+22,19,akward_carol," Well...yes...I mean...why not, your such a nice guy. Here. Take my number. Text me for the details. ",TEXT_IMAGE_ONLY,04/05/2018 08:48:00,FIRST,1,,,,-10,10,0
+23,20,facepalm,I am so lame...,TEXT_IMAGE_ONLY,04/05/2018 08:48:00,FIRST,0,,,,0,-10,0
+24,20,akward_carol," Well...yes...I mean...why not, your such a nice guy. Here. Take my number. Text me for the details. ",TEXT_IMAGE_ONLY,04/05/2018 08:48:00,FIRST,1,,,,0,10,0
