@@ -86,7 +86,7 @@ public class QuestionSceneManager : MonoBehaviour
 
     public void Next(int option)
     {
-        var dialog = GetDialogoUseCase.GetNextDialog(currentDialog.ordem, option, PlayerStatus.tags);
+        currentDialog = GetDialogoUseCase.GetNextDialog(currentDialog.ordem, option, PlayerStatus.tags);
         Setup();
         answered = false;
     }

@@ -45,8 +45,8 @@ namespace _Scripts.Monobehaviours
             Option3.ForEach(o => o.text = dialog.opcoes.Count > 2 ? dialog.opcoes[2]?.Texto : "");
             
             
-            FirstDialog?.gameObject.SetActive(dialog.layoutType == LayoutType.FIRST);
-            SecondDialog?.gameObject.SetActive(dialog.layoutType == LayoutType.SECOND);
+            if(FirstDialog)FirstDialog.gameObject.SetActive(dialog.layoutType == LayoutType.FIRST);
+            if(SecondDialog)SecondDialog.gameObject.SetActive(dialog.layoutType == LayoutType.SECOND);
         }
     }
 }
