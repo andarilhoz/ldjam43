@@ -19,12 +19,13 @@ namespace _Scripts.Core.Usecase
         public Dialogo GetNextDialog(int rodadaAtual, long respostaRodadaAtual, List<string> tags)
         {
             Dialogo dialogoSelecionado;
+            var tentativas = 0;
             do
-            {
+            {                
                 var rodadaSeguinte = rodadaAtual + 1;
                 dialogoSelecionado = GetNextDialogInternal(rodadaSeguinte, respostaRodadaAtual, tags);
-                
-            } while (dialogoSelecionado == null);
+                tentativas++;                
+            } while (dialogoSelecionado == null && tentativas < 10);
 
             return dialogoSelecionado;
         }
