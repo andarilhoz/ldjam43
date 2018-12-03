@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Injection;
+using UnityEngine;
+using UnityEngine.AI;
 using _Scripts.Core.Entity;
 using _Scripts.Dataprovider;
 
@@ -24,7 +26,8 @@ namespace _Scripts.Core.Usecase
             {                
                 var rodadaSeguinte = rodadaAtual + 1;
                 dialogoSelecionado = GetNextDialogInternal(rodadaSeguinte, respostaRodadaAtual, tags);
-                tentativas++;                
+                tentativas++;
+                Debug.Log("Tentativas: " + tentativas);
             } while (dialogoSelecionado == null && tentativas < 10);
 
             return dialogoSelecionado;
@@ -43,19 +46,21 @@ namespace _Scripts.Core.Usecase
         public Dialogo GetNextDialog(int rodadaAtual, List<string> tags)
         {
             Dialogo dialogoSelecionado;
+            var tentativas = 0;
             do
             {
                 int rodadaSeguinte = rodadaAtual + 1;
                 dialogoSelecionado = GetNextDialogInternal(rodadaSeguinte, tags);
-                
-            } while (dialogoSelecionado == null);
+                tentativas++;
+                Debug.Log("Tentativas: " + tentativas);
+            } while (dialogoSelecionado == null && tentativas < 10);
 
             return dialogoSelecionado;
         }
         
         
         private Dialogo GetNextDialogInternal(int ordem, List<string> tags)
-        {            
+        {                      
             var dialogosDaRodada = FetchDialogoDataProvider.FetchAll().FindAll((d) => d.ordem == ordem);
 
             var dialogo = dialogosDaRodada.Find((d) => (d.conditionTag == null || tags.Contains(d.conditionTag)));
