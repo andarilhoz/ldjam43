@@ -7,5 +7,6 @@ namespace DefaultNamespace
     public class GameConfig : ScriptableObject, IInjectable
     {
         public string UrlData;
+        public string UrlArt;
     }
 }

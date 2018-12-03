@@ -26,6 +26,7 @@ public class AppContext : MonoBehaviour, IInjectable
         Injector.Bind<GameConfig>(GameConfig);
         Injector.Bind<PlayerStatus>(PlayerStatus);
         Injector.Bind<AppContext>(this);
+        Injector.Bind<ImageProvider>(new ImageProvider());
         Injector.Bind<FetchDialogoDataProvider>(FetchDialogoDataProvider);
         Injector.Bind<GetDialogoUseCase>(new GetDialogoUseCase());
         Injector.PostBindings();

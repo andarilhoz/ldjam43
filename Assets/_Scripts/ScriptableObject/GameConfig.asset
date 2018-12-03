@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Name: GameConfig
   m_EditorClassIdentifier: 
   UrlData: https://raw.githubusercontent.com/andarilhoz/ldjam43/master/ParseCsv/Data.json
+  UrlArt: https://raw.githubusercontent.com/andarilhoz/ldjam43/master/Art
