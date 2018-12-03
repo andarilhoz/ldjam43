@@ -50,9 +50,8 @@
 		{
 			"id": 3,
 			"ordem": 2,
-			"imagem": "aguanabocamedatesao",
 			"texto": "It’s been a while since I don’t have a good Kung Pao Chicken. Hope it doesn't take so long",
-			"dialogoType": 0,
+			"dialogoType": 4,
 			"dataHora": 1525398420000,
 			"layoutType": 0,
 			"respostaDialogoAnterior": 1
@@ -121,7 +120,7 @@
 		{
 			"id": 11,
 			"ordem": 10,
-			"imagem": "holding_phone",
+			"imagem": "cellphone_alarm",
 			"dialogoType": 1,
 			"dataHora": 1525431600000,
 			"layoutType": 0,
@@ -169,9 +168,8 @@
 		{
 			"id": 14,
 			"ordem": 12,
-			"imagem": "getting_dressed",
 			"texto": "Don’t know why, but I’m feeling very good today. Very...powerfull. Like if I have my future entirely in my hands.",
-			"dialogoType": 0,
+			"dialogoType": 4,
 			"dataHora": 1525432740000,
 			"layoutType": 0
 		},
@@ -296,7 +294,7 @@
 			"imagem": "facepalm",
 			"texto": "I am so lame...",
 			"dialogoType": 0,
-			"dataHora": null,
+			"dataHora": 1525434480000,
 			"layoutType": 0,
 			"respostaDialogoAnterior": 0
 		},
